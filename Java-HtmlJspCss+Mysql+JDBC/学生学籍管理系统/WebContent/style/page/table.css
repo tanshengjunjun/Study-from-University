@@ -1,0 +1,44 @@
+.personalinfo{
+    text-align: center;
+    /*使表格居中*/
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.coursetable{
+    text-align: center;
+    /*使表格居中*/
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.courselist{
+    text-align: center;
+    /*使表格居中*/
+    margin-left:auto;
+    margin-right:auto;
+}
+
+table
+{
+    /*font-family: "Adobe 楷体 Std R";*/
+    width: 80%;
+    height: auto;
+    font-size: 20px;
+    border-collapse:collapse;
+    empty-cells: show;
+}
+
+caption{
+    font-family: "Adobe 黑体 Std R";
+    font-size: 30px;
+}
+
+table,th, td
+{
+    border: 1px solid black;
+}
+
+.change{
+    float: right;
+}

@@ -1,0 +1,4 @@
+butterfly.png
+shengdanlaoren.png
+cat_ghost.png
+感觉是要网上下载的正版的PNG才有效，自己用PS导出的PNG不能正常显示颜色。
