@@ -91,17 +91,17 @@ class LogOffFrame extends JDialog implements ActionListener {
 				c = myLogoff.schamount(card_number.getText().trim());
 
 				// 将找到的相关信息，删除
-				String delLogin = "delete from login where card_number = "
+				String delLogin = "delete  from login where card_number = "
 						+ Integer.parseInt(card_number.getText().trim()) + "";
-				String delDepositor = "delete from depositor where card_number = "
+				String delDepositor = "delete  from depositor where card_number = "
 						+ Integer.parseInt(card_number.getText().trim()) + "";
-				String delBorrower = "delete from borrower where card_number = "
+				String delBorrower = "delete  from borrower where card_number = "
 						+ Integer.parseInt(card_number.getText().trim()) + "";
-				String delLoan = "delete from loan where loan_number = "
+				String delLoan = "delete  from loan where loan_number = "
 						+ Integer.parseInt(c[1].trim()) + "";
-				String delAccount = "delete from account where account_number = "
+				String delAccount = "delete  from account where account_number = "
 						+ Integer.parseInt(b[1].trim()) + "";
-				String delCustomer = "delete from customer where customer_name = '"
+				String delCustomer = "delete  from customer where customer_name = '"
 						+ b[0] + "'  ";
 				myLogoff.Insert(delLogin);
 				myLogoff.Insert(delDepositor);

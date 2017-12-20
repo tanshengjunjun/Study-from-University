@@ -100,7 +100,7 @@ class BankSystem extends JDialog implements ActionListener {
 				else {
 					JOptionPane.showMessageDialog(null, "用户名或密码错误，请重新登录！",
 							"警告", JOptionPane.ERROR_MESSAGE);
-				}
+				}	
 			}
 		}
 		else if (e.getSource() == cancel) // 单击取消

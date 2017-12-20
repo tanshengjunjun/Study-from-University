@@ -46,9 +46,9 @@ public class DatabaseOperate {
 	// 查询存、取款账户相关信息
 	public String[] schbalance(String num) {
 		DatabaseConn DB = new DatabaseConn();
-		this.card_number = num;
+		this.card_number = num.trim();
 		String[] s = new String[6];
-		sql = "select * from depositor,account where (card_number = "
+		sql = "select depositor.customer_name,depositor.account_number, depositor.card_number,account.account_number,account.branch_name,account.balance from depositor,account where (depositor.card_number = "
 				+ Integer.parseInt(card_number)
 				+ ") and depositor.account_number = account.account_number ";
 		try {
@@ -77,7 +77,7 @@ public class DatabaseOperate {
 		DatabaseConn DB = new DatabaseConn();
 		this.card_number = num;
 		String[] s = new String[6];
-		sql = "select * from borrower,loan where (card_number = "
+		sql = "select borrower.customer_name,borrower.loan_number,borrower.card_number,loan.loan_number,loan.branch_name,loan.amount from borrower,loan where (borrower.card_number = "
 				+ Integer.parseInt(card_number)
 				+ ") and loan.loan_number = borrower.loan_number ";
 		try {
@@ -158,6 +158,7 @@ public class DatabaseOperate {
 			sql = "update login set password = " + password
 					+ " where card_number = " + Integer.parseInt(card_number.trim())
 					+ " ";
+			
 			//System.out.println(sql);
 			try {
 
